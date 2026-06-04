@@ -605,6 +605,76 @@
         font-size: 0.9rem;
       }
     }
+
+    /* Ajuste extra para que las galerías no se vean pegadas */
+    .prop-gallery {
+      width: 100%;
+      min-width: 0;
+      margin-bottom: 0.8rem;
+    }
+
+    .carousel-main {
+      display: block;
+    }
+
+    .prop-thumbs {
+      scrollbar-width: thin;
+    }
+
+    .prop-thumbs::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .prop-thumbs::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 9999px;
+    }
+
+
+    .photo-wrap {
+      position: relative;
+      width: 100%;
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 5;
+      background: rgba(74, 0, 0, 0.92);
+      color: #fff7ed;
+      padding: 0.35rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+    }
+
+    .card-photo {
+      display: block;
+    }
+
+
+    .prop-thumbs img {
+      cursor: pointer;
+      transition: opacity 0.15s, border-color 0.15s, transform 0.15s;
+    }
+
+    .prop-thumbs img:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+
+    .status-badge.disponible {
+      background: rgba(22, 101, 52, 0.94);
+      color: #f0fdf4;
+      border-color: rgba(187, 247, 208, 0.9);
+    }
+
   </style>
 </head>
 <body>
@@ -692,6 +762,7 @@
         <article class="card card-featured arriendo">
           <div class="prop-gallery" data-group="qn-dep">
             <div class="carousel">
+              <span class="status-badge">Arrendada</span>
               <img src="qn-dep-arriendo-1.jpg" alt="Departamento en arriendo Quinta Normal" class="prop-main carousel-main" data-group="qn-dep" />
               <button class="carousel-btn prev" data-group="qn-dep">&lsaquo;</button>
               <button class="carousel-btn next" data-group="qn-dep">&rsaquo;</button>
@@ -746,9 +817,72 @@
           </div>
         </article>
 
+
+        <!-- DEPARTAMENTO ARRIENDO LOURDES 1D -->
+        <article class="card arriendo">
+          <div class="prop-gallery" data-group="lourdes-arriendo-1d">
+            <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
+              <img src="lourdes1.jpg" alt="Departamento 1D en arriendo Metro Gruta de Lourdes" class="prop-main carousel-main" data-group="lourdes-arriendo-1d" />
+              <button class="carousel-btn prev" data-group="lourdes-arriendo-1d" type="button">&lsaquo;</button>
+              <button class="carousel-btn next" data-group="lourdes-arriendo-1d" type="button">&rsaquo;</button>
+            </div>
+            <div class="prop-thumbs">
+              <img src="lourdes1.jpg" alt="Foto 1" data-group="lourdes-arriendo-1d" data-index="0" class="active" />
+              <img src="lourdes2.jpg" alt="Foto 2" data-group="lourdes-arriendo-1d" data-index="1" />
+              <img src="lourdes3.jpg" alt="Foto 3" data-group="lourdes-arriendo-1d" data-index="2" />
+              <img src="lourdes4.jpg" alt="Foto 4" data-group="lourdes-arriendo-1d" data-index="3" />
+              <img src="lourdes5.jpg" alt="Foto 5" data-group="lourdes-arriendo-1d" data-index="4" />
+              <img src="lourdes6.jpg" alt="Foto 6" data-group="lourdes-arriendo-1d" data-index="5" />
+              <img src="lourdes7.jpg" alt="Foto 7" data-group="lourdes-arriendo-1d" data-index="6" />
+              <img src="lourdes8.jpg" alt="Foto 8" data-group="lourdes-arriendo-1d" data-index="7" />
+              <img src="lourdes9.jpg" alt="Foto 9" data-group="lourdes-arriendo-1d" data-index="8" />
+              <img src="lourdes10.jpg" alt="Foto 10" data-group="lourdes-arriendo-1d" data-index="9" />
+              <img src="lourdes11.jpg" alt="Foto 11" data-group="lourdes-arriendo-1d" data-index="10" />
+              <img src="lourdes12.jpg" alt="Foto 12" data-group="lourdes-arriendo-1d" data-index="11" />
+              <img src="lourdes13.jpg" alt="Foto 13" data-group="lourdes-arriendo-1d" data-index="12" />
+              <img src="lourdes14.jpg" alt="Foto 14" data-group="lourdes-arriendo-1d" data-index="13" />
+              <img src="lourdes15.jpg" alt="Foto 15" data-group="lourdes-arriendo-1d" data-index="14" />
+            </div>
+          </div>
+
+          <span class="card-tag">Departamento · Arriendo · Quinta Normal</span>
+          <h3>Depto 1D · Baño en suite · Metro Gruta de Lourdes</h3>
+          <p class="card-price">$315.000 CLP / mes</p>
+          <p class="card-location">
+            Av. General Velásquez con Mapocho, <strong>Quinta Normal</strong>, a 4 cuadras del
+            Metro Gruta de Lourdes. Sector con fuerte vida de barrio y comercio.
+          </p>
+          <p class="card-details">
+            Departamento de <strong>36 m²</strong> con <strong>1 dormitorio</strong> (principal en suite),
+            cocina americana y living–comedor, con buena iluminación natural y distribución eficiente.
+          </p>
+          <p class="card-details">
+            Entorno con <strong>bancos, minimarkets, ferreterías, farmacias, supermercado y cafeterías</strong>,
+            ideal para quienes buscan comodidad diaria y conectividad.
+          </p>
+          <p class="card-meta">
+            Superficie: 36 m² aprox. · Dormitorios: 1 · Baños: 1 (en suite).<br />
+            Gasto común aprox.: <strong>$55.000</strong>.
+          </p>
+          <div class="card-footer">
+            <span class="card-code">Código: AR-QN-LOURDES-1D</span>
+            <a
+              class="btn btn-sm btn-wa"
+              href="https://wa.me/56991401985?text=Consulta%20por%20departamento%201D%20Metro%20Gruta%20de%20Lourdes."
+              target="_blank" rel="noopener noreferrer"
+            >
+              Consultar por WhatsApp
+            </a>
+          </div>
+        </article>
+
         <!-- CASA ARRIENDO QUINTA NORMAL -->
         <article class="card arriendo">
-          <img src="casawk-1.jpg" alt="Casa en arriendo Quinta Normal" class="card-photo" />
+          <div class="photo-wrap">
+            <span class="status-badge">Arrendada</span>
+            <img src="casawk-1.jpg" alt="Casa en arriendo Quinta Normal" class="card-photo" />
+          </div>
           <span class="card-tag">Casa · Arriendo · Quinta Normal</span>
           <h3>Casa 3D · 2B · Quinta Normal</h3>
           <p class="card-price">$660.000 CLP / mes</p>
@@ -778,6 +912,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pa240">
             <div class="carousel">
+              <span class="status-badge">Arrendada</span>
               <img src="pa240-1.jpg" alt="Galpón 240 m² Puente Alto" class="prop-main carousel-main" data-group="pa240" />
               <button class="carousel-btn prev" data-group="pa240">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pa240">&rsaquo;</button>
@@ -823,6 +958,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pa260">
             <div class="carousel">
+              <span class="status-badge">Arrendada</span>
               <img src="pa260-1.jpg" alt="Galpón 260 m² Puente Alto" class="prop-main carousel-main" data-group="pa260" />
               <button class="carousel-btn prev" data-group="pa260">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pa260">&rsaquo;</button>
@@ -862,7 +998,10 @@
 
         <!-- PUENTE ALTO: GALPÓN 80 m² -->
         <article class="card arriendo">
-          <img src="pa080-1.jpg" alt="Galpón 80 m² Puente Alto" class="card-photo" />
+          <div class="photo-wrap">
+            <span class="status-badge">Arrendada</span>
+            <img src="pa080-1.jpg" alt="Galpón 80 m² Puente Alto" class="card-photo" />
+          </div>
           <span class="card-tag">Galpón · Arriendo · Puente Alto</span>
           <h3>Galpón 80 m² con oficinas y patio</h3>
           <p class="card-price">$800.000 CLP / mes</p>
@@ -891,6 +1030,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="serena">
             <div class="carousel">
+              <span class="status-badge">Arrendada</span>
               <img src="serena-1.jpg" alt="Departamento en arriendo La Serena Coquimbo" class="prop-main carousel-main" data-group="serena" />
               <button class="carousel-btn prev" data-group="serena">&lsaquo;</button>
               <button class="carousel-btn next" data-group="serena">&rsaquo;</button>
@@ -957,6 +1097,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pi094">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="pi094-1.jpg" alt="Galpón 94 m² La Pintana" class="prop-main carousel-main" data-group="pi094" />
               <button class="carousel-btn prev" data-group="pi094">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pi094">&rsaquo;</button>
@@ -993,6 +1134,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pi115">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="pi115-1.jpg" alt="Galpón 115 m² La Pintana" class="prop-main carousel-main" data-group="pi115" />
               <button class="carousel-btn prev" data-group="pi115">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pi115">&rsaquo;</button>
@@ -1030,6 +1172,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pi135">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="pi135-1.jpg" alt="Galpón 137 m² La Pintana" class="prop-main carousel-main" data-group="pi135" />
               <button class="carousel-btn prev" data-group="pi135">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pi135">&rsaquo;</button>
@@ -1066,6 +1209,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pi150">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="pi150-1.jpg" alt="Galpón 150 m² La Pintana" class="prop-main carousel-main" data-group="pi150" />
               <button class="carousel-btn prev" data-group="pi150">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pi150">&rsaquo;</button>
@@ -1103,6 +1247,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pi180">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="pi180-1.jpg" alt="Galpón 180 m² La Pintana" class="prop-main carousel-main" data-group="pi180" />
               <button class="carousel-btn prev" data-group="pi180">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pi180">&rsaquo;</button>
@@ -1144,6 +1289,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="pi280">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="pi280-1.jpg" alt="Galpón 280 m² La Pintana" class="prop-main carousel-main" data-group="pi280" />
               <button class="carousel-btn prev" data-group="pi280">&lsaquo;</button>
               <button class="carousel-btn next" data-group="pi280">&rsaquo;</button>
@@ -1158,7 +1304,7 @@
           <span class="card-tag">Galpón · 280 m² aprox.</span>
           <h3>Galpón 280 m² · Condominio La Pintana</h3>
           <!-- ✅ CAMBIO APLICADO -->
-          <p class="card-price">$1.950.000 CLP / mes</p>
+          <p class="card-price">$1.700.000 CLP / mes</p>
           <p class="card-location">
             Sector industrial La Pintana, Santa Rosa / Lautaro 1900.
           </p>
@@ -1186,6 +1332,7 @@
         <article class="card arriendo">
           <div class="prop-gallery" data-group="qn-galpon">
             <div class="carousel">
+              <span class="status-badge">Arrendada</span>
               <img src="qn-galpon-1.jpg" alt="Galpón Quinta Normal" class="prop-main carousel-main" data-group="qn-galpon" />
               <button class="carousel-btn prev" data-group="qn-galpon">&lsaquo;</button>
               <button class="carousel-btn next" data-group="qn-galpon">&rsaquo;</button>
@@ -1242,6 +1389,7 @@
         <article class="card card-featured venta">
           <div class="prop-gallery" data-group="teno">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="teno1-1.jpg" alt="Departamento en venta Quinta Normal" class="prop-main carousel-main" data-group="teno" />
               <button class="carousel-btn prev" data-group="teno">&lsaquo;</button>
               <button class="carousel-btn next" data-group="teno">&rsaquo;</button>
@@ -1256,7 +1404,7 @@
           <div>
             <span class="card-tag">Departamento · Venta · Quinta Normal</span>
             <h3>Depto 3D · 1B · 47 m² · Rivas Vicuña 1412</h3>
-            <p class="card-price">UF 1.990</p>
+            <p class="card-price">UF 1.800</p>
             <p class="card-location">
               Rivas Vicuña 1412, <strong>Quinta Normal</strong>, a 6 cuadras del Metro Quinta Normal.
             </p>
@@ -1288,6 +1436,7 @@
         <article class="card venta">
           <div class="prop-gallery" data-group="lourdes">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="lourdes-1.jpg" alt="Departamento en venta Lourdes Quinta Normal" class="prop-main carousel-main" data-group="lourdes" />
               <button class="carousel-btn prev" data-group="lourdes">&lsaquo;</button>
               <button class="carousel-btn next" data-group="lourdes">&rsaquo;</button>
@@ -1318,7 +1467,7 @@
           </div>
           <span class="card-tag">Departamento · Venta · Quinta Normal</span>
           <h3>Depto 1D · Baño en suite · Frente Metro Gruta de Lourdes</h3>
-          <p class="card-price">UF 1.990</p>
+          <p class="card-price">UF 1.800</p>
           <p class="card-location">
             Patria Nueva 716, <strong>Quinta Normal</strong>, frente a Metro Gruta de Lourdes (ref. Gral. Velásquez con San Pablo).
           </p>
@@ -1355,6 +1504,7 @@
         <article class="card card-featured venta">
           <div class="prop-gallery" data-group="cueto">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="cueto1-1.jpg" alt="Departamento en venta Cueto 727" class="prop-main carousel-main" data-group="cueto" />
               <button class="carousel-btn prev" data-group="cueto">&lsaquo;</button>
               <button class="carousel-btn next" data-group="cueto">&rsaquo;</button>
@@ -1378,7 +1528,7 @@
           <div>
             <span class="card-tag">Departamento · Venta · Santiago</span>
             <h3>Depto 2D · Terraza amplia · Cueto 727</h3>
-            <p class="card-price">UF 1.990</p>
+            <p class="card-price">UF 2.100</p>
             <p class="card-location">
               Calle Cueto 727, <strong>Comuna de Santiago</strong>, a 6 cuadras del Metro Cumming.
             </p>
@@ -1411,6 +1561,7 @@
         <article class="card venta">
           <div class="prop-gallery" data-group="andes">
             <div class="carousel">
+              <span class="status-badge disponible">Disponible</span>
               <img src="andes-1.jpg" alt="Propiedad comercial Andes 3050" class="prop-main carousel-main" data-group="andes" />
               <button class="carousel-btn prev" data-group="andes">&lsaquo;</button>
               <button class="carousel-btn next" data-group="andes">&rsaquo;</button>
@@ -1485,4 +1636,123 @@
               Escribir por WhatsApp
             </a>
             <a
-              class="btn btn-ou
+              class="btn btn-outline"
+              href="mailto:ronald.imagina@gmail.com"
+            >
+              Enviar correo
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p>
+            Atención personalizada para arriendos, ventas, visitas y publicación de propiedades.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Rocas de Arauco Propiedades</span> · Corretaje inmobiliario · Santiago de Chile
+  </footer>
+
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Carruseles de imágenes: cada galería funciona de manera independiente.
+      document.querySelectorAll(".prop-gallery").forEach((gallery) => {
+        const mainImage = gallery.querySelector(".carousel-main");
+        const thumbs = Array.from(gallery.querySelectorAll(".prop-thumbs img"));
+        const prevBtn = gallery.querySelector(".carousel-btn.prev");
+        const nextBtn = gallery.querySelector(".carousel-btn.next");
+
+        if (!mainImage || thumbs.length === 0) return;
+
+        let currentIndex = thumbs.findIndex((thumb) => thumb.classList.contains("active"));
+        if (currentIndex < 0) currentIndex = 0;
+
+        function showImage(index) {
+          currentIndex = (index + thumbs.length) % thumbs.length;
+          const selectedThumb = thumbs[currentIndex];
+
+          mainImage.setAttribute("src", selectedThumb.getAttribute("src"));
+          mainImage.setAttribute("alt", selectedThumb.getAttribute("alt") || "Foto de propiedad");
+
+          thumbs.forEach((thumb) => thumb.classList.remove("active"));
+          selectedThumb.classList.add("active");
+
+          selectedThumb.scrollIntoView({
+            behavior: "smooth",
+            inline: "center",
+            block: "nearest"
+          });
+        }
+
+        thumbs.forEach((thumb, index) => {
+          thumb.addEventListener("click", (event) => {
+            event.preventDefault();
+            showImage(index);
+          });
+        });
+
+        if (prevBtn) {
+          prevBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            showImage(currentIndex - 1);
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            showImage(currentIndex + 1);
+          });
+        }
+
+        showImage(currentIndex);
+      });
+
+      // Filtro arriendo / venta
+      const btnTodo = document.getElementById("btn-todo");
+      const btnArriendo = document.getElementById("btn-arriendo");
+      const btnVenta = document.getElementById("btn-venta");
+
+      const sectionArriendos = document.getElementById("arriendos");
+      const sectionVentas = document.getElementById("ventas");
+
+      const setActiveButton = (activeButton) => {
+        [btnTodo, btnArriendo, btnVenta].forEach((button) => {
+          if (button) button.classList.remove("active");
+        });
+        if (activeButton) activeButton.classList.add("active");
+      };
+
+      if (btnTodo) {
+        btnTodo.addEventListener("click", () => {
+          if (sectionArriendos) sectionArriendos.classList.remove("hidden");
+          if (sectionVentas) sectionVentas.classList.remove("hidden");
+          setActiveButton(btnTodo);
+        });
+      }
+
+      if (btnArriendo) {
+        btnArriendo.addEventListener("click", () => {
+          if (sectionArriendos) sectionArriendos.classList.remove("hidden");
+          if (sectionVentas) sectionVentas.classList.add("hidden");
+          setActiveButton(btnArriendo);
+        });
+      }
+
+      if (btnVenta) {
+        btnVenta.addEventListener("click", () => {
+          if (sectionArriendos) sectionArriendos.classList.add("hidden");
+          if (sectionVentas) sectionVentas.classList.remove("hidden");
+          setActiveButton(btnVenta);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
